@@ -4,7 +4,7 @@
 """rss_parse.py: Parse RSS Feeds."""
 __author__ = "Proteu5"
 __copyright__ = "Copyright 2017, The Enigma Project"
-__credits__ = ["Proteu5"]
+__credits__ = "Proteu5"
 __license__ = "GPL"
 __version__ = "0.0.1"
 __maintainer__ = "Proteu5"
@@ -15,9 +15,10 @@ import feedparser
 import webbrowser
 
 
-# Menu system!
+# Main Menu system
 def menu():
-	strs = ("1. Reuters: World News\n"
+	strs = ("### Menu ###\n"
+			"1. Reuters: World News\n"
         	"2. Reuters: Technology News\n"
         	"3. Reuters: Business News\n"
         	"4. Reuters: Egypt \n"
@@ -27,18 +28,22 @@ def menu():
 	choice = input(strs)
 	return int(choice) 
 
+# R/W Menu system
 def menu_io():
-	strs_2 = ("1. Write\n"
+	strs_2 = ("### Clipboard ###\n"
+			"1. Write\n"
         	"2. Read\n"
         	"3. URL\n"
-        	"4. Exit : ")
+        	"4. Return : ")
 	choice_io = input(strs_2)
 	return int(choice_io) 
 
+# Open A URL
 def url():
 	choice_2 = input()
 	webbrowser.open(choice_2)
 
+# Clipboard R/W Menu Intergration
 def clip():
 	while True:
 		choice_io = menu_io()
@@ -48,7 +53,7 @@ def clip():
 			f.write(choice_3+"\n")
 			f.close
 		elif choice_io == 2:
-			print ("Read")
+			print ("\nLinks Clipboard: \n")
 			f=open("links","r")
 			if f.mode == 'r':
 				contents =f.read()
@@ -59,7 +64,7 @@ def clip():
 		elif choice_io == 4:
 			break
 
-
+# RSS Feed Reader
 while True:
     choice = menu()
     if choice == 1:
