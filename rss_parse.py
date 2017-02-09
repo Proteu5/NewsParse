@@ -1,6 +1,4 @@
 ### RSS Feed Reader ###
-### Author: Proteu5 ###
-### 02/09/2017      ###
 #!/usr/bin/env python
 
 """rss_parse.py: Parse RSS Feeds."""
