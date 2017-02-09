@@ -1,3 +1,18 @@
+### RSS Feed Reader ###
+### Author: Proteu5 ###
+### 02/09/2017      ###
+#!/usr/bin/env python
+
+"""rss_parse.py: Parse RSS Feeds."""
+__author__ = "Proteu5"
+__copyright__ = "Copyright 2017, The Enigma Project"
+__credits__ = ["Proteu5"]
+__license__ = "GPL"
+__version__ = "0.0.1"
+__maintainer__ = "Proteu5"
+__email__ = "null@gmail.com"
+__status__ = "In Production"
+
 import feedparser
 import webbrowser
 
@@ -37,12 +52,5 @@ while True:
     	url()
     elif choice == 5:
         break
-
-#webbrowser.open('http://feeds.reuters.com/~r/Reuters/worldNews/~3/1FH54wc2DMA/us-safrica-zuma-idUSKBN15O2FQ')
-#fun open():
-#    return urllib.urlopen('http://feeds.reuters.com/~r/Reuters/worldNews/~3/1FH54wc2DMA/us-safrica-zuma-idUSKBN15O2FQ')
- 
-#for post in d.entries:
-#	print (post.title+ ":"+post.link+"\n")
 
 
