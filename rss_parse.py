@@ -13,7 +13,6 @@ __status__ = "In Production"
 
 import feedparser
 import webbrowser
-import sys
 
 
 # Menu system!
